@@ -1,0 +1,144 @@
+
+.header__hamburger-menu{
+    background-color: #002F52;
+    background-image:url("../img/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:24px;
+    width:24px;
+    display:block;
+    padding:28px 22px;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+}
+.header .container{
+    display: flex;
+    align-items: center;
+}
+.header__list__item{
+    text-transform: uppercase;
+
+}
+.container__img{
+    padding:8px;
+}
+.container__button{
+    display:none;
+}
+
+
+#menu:checked ~ .container__menu-container .header__hamburger-menu {
+    background-color: transparent;
+    background-image: url("../img/menu-black.svg");
+}
+#menu:checked ~ .menu-list{
+    display:none;
+}
+
+
+.menu-list{
+    position:absolute;
+    z-index:10;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    top:100%;
+    background-color: var(--white);
+    width:300px;
+}
+
+.menu-list__title{
+    padding:16px 24px;
+    font-weight:700;
+    color:#EB9B00;
+}
+.menu-list__link{
+    background: var(--main-gradient-blue-color);
+    display:block;
+    padding:16px 24px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    text-transform: uppercase;
+
+}
+.menu-list__link:hover{
+    -webkit-text-fill-color:var(--white);
+    background: var(--main-gradient-blue-color);
+
+}
+
+.logo-title{
+    display:none;
+    font-size:24px;
+}
+.header__list{
+    display:none;
+}
+
+.container a{
+    display:flex;
+    align-items: center;
+}
+.container a span{
+    display:none; 
+}
+@media screen and (min-width:1024px){
+    .header__hamburger-menu{
+        display:none;
+    }
+    .logo-title{
+        display:inline-block;
+    }
+    .header__list{
+        display:flex;
+        align-items: center;
+        
+    }
+    .header__list__item{
+        padding:1em;
+    }
+    .header__list__item__link{
+        color:var(--black);
+    }
+    .container a{
+        margin:.5em;
+    }
+    .container__img-heart{
+        display:none;
+    }
+    #category ~ .menu-list{
+        width:fit-content;
+        display:none;
+    }
+
+    #category:checked ~ .menu-list{
+        display:block;
+
+    }
+    #category:checked ~ label{
+        background-image: var(--main-gradient-blue-color);
+        color:var(--white);
+        padding:.7em 0;
+
+    }
+    
+    
+}
+@media screen and (min-width:1728px){
+    .header{
+        padding:0 2em;
+    }
+    .container a span{
+        color:var(--main-color-blue);
+        display:inline-block;
+    }
+    
+    .header__list{
+        margin-right:auto;
+        margin-left:3em;
+
+    }
+
+}

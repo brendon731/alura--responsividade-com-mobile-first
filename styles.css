@@ -1,0 +1,27 @@
+@import url("assets/styles/header.css");
+@import url("assets/styles/banner.css");
+@import url("assets/styles/carrossel.css");
+@import url("assets/styles/card.css");
+@import url("assets/styles/topics.css");
+@import url("assets/styles/contact.css");
+@import url("assets/styles/footer.css");
+
+
+
+:root{
+    --background-color:#EBECEE;
+    --white:#FFFFFF;
+    --main-gradient-blue-color:linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --main-color-blue:#002F52;
+    --main-color-yellow:#EB9B00;
+    --black:#000000;
+}
+.header{
+    background-color: var(--white);
+}
+body{
+    background-color:var(--background-color);
+    font-family: "poppins";
+}
+
+
